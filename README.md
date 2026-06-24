@@ -1,35 +1,39 @@
-# EU-souveräne LLMs — leistungsfähige KI ohne Datentransfer in die USA
+# EU-souveräne LLMs — leistungsfähige KI mit Datenresidenz in der EU
 
 > Herstellerneutraler Überblick: Welche leistungsfähigen Sprachmodelle kann ein
-> deutsches/europäisches Unternehmen 2026 **DSGVO-konform** betreiben, ohne Daten in die USA
-> zu schicken? Mit Lizenzen, Hosting-Optionen und der rechtlichen Realität — jeder Fakt mit Quelle.
+> deutsches/europäisches Unternehmen 2026 **DSGVO-konform mit voller Datenkontrolle** betreiben?
+> Mit Lizenzen, EU-Hosting-Optionen und der rechtlichen Einordnung — jeder Fakt mit Quelle.
 
 Gepflegt von **[azena](https://azena.ai)** — KI-Boutique aus Stuttgart, die genau solche Systeme
 für den Mittelstand baut. **Kein Rechtsrat — eine Arbeitsgrundlage.** Stand: **Mitte 2026**.
 Korrekturen & PRs willkommen.
 
+Es geht hier um **EU-Datensouveränität und Datenresidenz** — also darum, bewusst zu entscheiden,
+wo und in welchem Rechtsraum die eigenen Daten verarbeitet werden. Das ist eine Stärke, keine
+Abgrenzung: viele der besten offenen Modelle und Cloud-Anbieter sind international, und das ist gut so.
+
 ---
 
 ## In 60 Sekunden
 
-Es gibt zwei saubere Wege zu „keine Daten in die USA":
+Es gibt zwei saubere Wege zu voller Datenkontrolle mit Verarbeitung in der EU:
 
 1. **Offene Gewichte selbst hosten** auf eigener oder EU-Cloud-Infrastruktur. Dann fließen *keine*
-   Inferenzdaten an den Modellhersteller — entscheidend ist nur die **Lizenz**, nicht die Herkunft
+   Inferenzdaten an den Modellhersteller ab — entscheidend ist nur die **Lizenz**, nicht die Herkunft
    des Herstellers. Top-Optionen: **Mistral** (Apache-Modelle), **Teuken/OpenGPT-X**, **EuroLLM**,
    **Qwen**, **DeepSeek**.
 2. **Einen in der EU ansässigen Managed-Anbieter** nutzen: **Mistral La Plateforme, IONOS,
-   OVHcloud, Scaleway**. Kein US-CLOUD-Act-Zugriff, Datenresidenz in der EU.
+   OVHcloud, Scaleway** — mit Datenresidenz in der EU.
 
-Der **verbreitete Irrtum**: Die „EU-Region" eines US-Anbieters (Azure, AWS) löst das Problem
-**nicht** — der US CLOUD Act greift unabhängig vom Speicherort. Dazu unten mehr.
+Wichtig zu verstehen: Eine „EU-Region" allein sagt noch nichts über den **Rechtsraum**, dem ein
+Anbieter unterliegt. Wer echte Datenresidenz braucht, kalkuliert das mit ein — dazu unten mehr.
 
 ---
 
 ## 1. Offene Gewichte selbst hosten — die Lizenz entscheidet
 
 Wenn ihr heruntergeladene Gewichte auf eurer eigenen oder einer EU-Infrastruktur betreibt, gibt es
-**keinen Datentransfer** an den Hersteller — auch nicht bei Modellen aus China oder den USA. Die
+**keinen Datenabfluss** an den Hersteller — auch nicht bei Modellen aus den USA oder China. Die
 Server-Herkunft betrifft nur die *gehostete API* des Herstellers, nicht lokal laufende Gewichte.
 Maßgeblich für den Eigenbetrieb ist deshalb die **Lizenz**.
 
@@ -44,9 +48,9 @@ Maßgeblich für den Eigenbetrieb ist deshalb die **Lizenz**.
 | **Qwen3** (0.6–235B) | 🇨🇳 Alibaba | **Apache 2.0** ✅ | dense + MoE | permissiv; lokal datenschutzunkritisch |
 | **DeepSeek-R1** | 🇨🇳 DeepSeek | **MIT** ✅ | 671B/37B aktiv | starkes Reasoning |
 | ⚠️ **Mistral Large 2 / Pixtral Large** | 🇫🇷 EU | **MRL — nicht kommerziell** ❌ | — | **NICHT** Apache — Falle! |
-| ⚠️ **Codestral 22B v0.1** | 🇫🇷 EU | **MNPL — nicht kommerziell** ❌ | 22B | spätere Versionen wurden umlizenziert |
+| ⚠️ **Codestral 22B v0.1** | 🇫🇷 EU | **MNPL — nicht kommerziell** ❌ | 22B | spätere Versionen umlizenziert |
 | ⚠️ **Aleph Alpha Pharia-1 7B** | 🇩🇪 DE | **Open Aleph License — nur Forschung** ❌ | 7B | kommerziell nur per Vertrag |
-| ⚠️ **Meta Llama 4** | 🇺🇸 USA | **Llama Community License** (kein OSI) ❌ | MoE | **EU-Sperre für multimodale Modelle** (s.u.) |
+| ⚠️ **Meta Llama 4** | 🇺🇸 USA | **Llama Community License** (kein OSI) ❌ | MoE | EU-Sperre für multimodale Modelle (s.u.) |
 
 ### Zwei Fallen, die teuer werden
 
@@ -62,12 +66,13 @@ Maßgeblich für den Eigenbetrieb ist deshalb die **Lizenz**.
 Teuken/OpenGPT-X, EuroLLM, Salamandra/ALIA. Qwen und DeepSeek sind nicht EU-Herkunft, beim
 **Self-Hosting** aber datenschutzunkritisch, weil die Gewichte lokal laufen.
 
-## 2. Managed Inference in der EU — Daten bleiben in der EU
+## 2. Managed Inference mit Datenresidenz in der EU
 
 Wer nicht selbst hosten will, kann einen Anbieter nutzen, der das Modell betreibt und die Daten in
-der EU hält. Entscheidend ist hier der **Unternehmenssitz** des Anbieters (wegen CLOUD Act, §3).
+der EU verarbeitet. Für die Datenresidenz ist hier der **Unternehmenssitz** des Anbieters ein
+wichtiger Faktor (siehe §3).
 
-**Echte EU-Headquarter (kein CLOUD-Act-Zugriff):**
+**In der EU ansässig, EU-Datenresidenz:**
 
 | Anbieter | Sitz | Datenresidenz | Modelle |
 |---|---|---|---|
@@ -79,65 +84,53 @@ der EU hält. Entscheidend ist hier der **Unternehmenssitz** des Anbieters (wege
 
 > *DPA-Detailtexte von OVHcloud und Scaleway konnten nicht final verifiziert werden — vor
 > Vertragsschluss die jeweilige Auftragsverarbeitungs-Vorlage prüfen.*
-> *Nebius ist die 2024 umbenannte Yandex N.V. (nach Verkauf aller Russland-Assets, NL-Sitz) —
-> rechtlich kein US-Risiko, aber eine Governance-Nuance, die man kennen sollte.*
 
-**US-Anbieter mit EU-Region (CLOUD-Act-relevant — siehe §3):**
+**Anbieter mit US-Konzernsitz und EU-Region (Rechtsraum beachten — siehe §3):**
 
-| Anbieter | EU-Mechanismus | Caveat |
+| Anbieter | EU-Mechanismus | Hinweis |
 |---|---|---|
-| **Azure OpenAI** | „EU Data Zone" + Microsoft „EU Data Boundary" | Microsoft = US-Konzern → CLOUD Act bleibt |
-| **AWS Bedrock** | EU-Regionen Frankfurt/Irland | US-Konzern → CLOUD Act bleibt |
+| **Azure OpenAI** | „EU Data Zone" + „EU Data Boundary" | unterliegt als US-Konzern weiter US-Recht |
+| **AWS Bedrock** | EU-Regionen Frankfurt/Irland | dito |
 | **AWS European Sovereign Cloud** | **GA seit Jan 2026**, erste Region Brandenburg, separat EU-betrieben | Bedrock dort **nur Amazon-Nova-Modelle** zum Start |
 
 Die wichtigste Neuerung Mitte 2026 ist die **AWS European Sovereign Cloud** (EU-betriebene, separate
 Partition) — die Modellauswahl ist dort aber noch dünn.
 
-## 3. Die rechtliche Realität: Warum „EU-Region" oft nicht reicht
+## 3. Datenresidenz: worauf es rechtlich ankommt
 
-Das ist der Teil, den die meisten falsch verstehen.
+Ein Punkt wird oft übersehen — und er ist entscheidend, wenn eure Compliance echte Datenresidenz in
+der EU verlangt.
 
-- **US CLOUD Act (2018):** zwingt **US-ansässige Anbieter**, Daten in ihrer „possession, custody, or
-  control" herauszugeben — **unabhängig vom physischen Speicherort**. Eine EU-Region eines
-  US-Anbieters beseitigt dieses Risiko also **nicht**.
-  ([AWS zum CLOUD Act](https://aws.amazon.com/compliance/cloud-act/)) Microsoft France bestätigte 2025
-  vor dem französischen Senat unter Eid, keine Garantie gegen US-Behördenzugriff selbst bei FR-Hosting
-  geben zu können.
-- **EU-US Data Privacy Framework (DPF):** Angemessenheitsbeschluss vom 10. Juli 2023, **Mitte 2026
-  weiterhin in Kraft** — aber **angefochten**: Das EuG wies die Klage *Latombe* (T-553/23) am
-  3. Sep 2025 ab; das **Rechtsmittel beim EuGH (Rs. C-703/25 P)** ist Mitte 2026 noch **anhängig**.
-  Ein „Schrems III"-Urteil, das den DPF kippt, gibt es bislang **nicht**. Strukturell fragil bleibt
-  der DPF, weil er auf der per Dekret widerrufbaren **Executive Order 14086** fußt und das
-  US-Aufsichtsgremium PCLOB Anfang 2025 sein Quorum verlor. `[strittig/offen]`
-- **DSGVO Art. 44 ff. + Schrems II (2020):** Jeder Transfer in ein Drittland (inkl. Fernzugriff)
-  braucht eine Rechtsgrundlage — Angemessenheitsbeschluss oder **Standardvertragsklauseln (SCC)** plus
-  ein **Transfer Impact Assessment**.
-- **Verschlüsselung hilft hier nicht:** Die EDPB-Empfehlungen 01/2020 nennen starke Verschlüsselung mit
-  ausschließlich im EWR gehaltenen Schlüsseln als wirksame Zusatzmaßnahme — **aber** LLM-Inferenz
-  braucht den **Klartext** zur Verarbeitung. Damit greift diese technische Maßnahme nicht; der
-  Transfer muss vermieden, nicht abgesichert werden.
+- Eine **EU-Region** allein sagt nichts darüber, welchem **Rechtsraum** ein Anbieter unterliegt. Der
+  **US CLOUD Act** (2018) etwa erlaubt US-Behörden, von US-ansässigen Anbietern Daten zu verlangen —
+  unabhängig vom Serverstandort. Eine Frankfurt-Region eines US-Konzerns liegt physisch in der EU,
+  der Anbieter unterliegt aber weiter US-Recht. Das ist kein Werturteil, sondern ein Faktor, den eine
+  saubere Datenresidenz-Strategie einkalkuliert. ([AWS zum CLOUD Act](https://aws.amazon.com/compliance/cloud-act/))
+- Das **EU-US Data Privacy Framework** ist Mitte 2026 in Kraft, aber **vor dem EuGH angefochten**
+  (Verfahren C-703/25 P, noch anhängig). Wer auf maximale Planungssicherheit setzt, hält die
+  Verarbeitung gern von vornherein in der EU. `[Status offen]`
+- **DSGVO Art. 44 ff. + Schrems II (2020):** Datenverarbeitung außerhalb der EU braucht eine
+  Rechtsgrundlage (Angemessenheitsbeschluss oder SCC + Transfer Impact Assessment).
+- **Verschlüsselung ersetzt die Architektur nicht:** LLM-Inferenz braucht den **Klartext** zur
+  Verarbeitung — die Datenresidenz wird also über die Architektur entschieden, nicht über ein
+  nachträgliches Add-on.
 
 > **Wichtig zur Abgrenzung:** Der **EU AI Act** regelt Risiko und Transparenz — **nicht** die
-> Datenresidenz. Wo eure Daten liegen müssen, ergibt sich aus der **DSGVO**, nicht aus dem AI Act.
+> Datenresidenz. Wo eure Daten verarbeitet werden müssen, ergibt sich aus der **DSGVO**.
 > (Zum AI Act: unser [EU-AI-Act-Leitfaden](https://github.com/azena-ai/eu-ai-act-mittelstand).)
 
-**Fazit:** Der sicherste Weg zu „keine Daten in die USA" ist **nicht** die EU-Region eines
-US-Anbieters, sondern **(a)** Self-Hosting offener Gewichte oder **(b)** ein EU-headquartierter Anbieter.
+## 4. Europäische Souveränitäts-Landschaft (Mitte 2026)
 
-## 4. Deutsche & europäische Souveränitäts-Landschaft (Mitte 2026)
-
-- **Aleph Alpha (Heidelberg)** hat sich 2024 vom Rennen um immer größere Foundation-Models
-  verabschiedet und auf die Enterprise-Plattform **PhariaAI** verlagert. Im **April 2026** wurde die
-  **Fusion mit dem kanadischen Cohere** angekündigt (transatlantische „Sovereign-AI"-Allianz, Schwarz-
-  Gruppe als Investor; Abschluss vorbehaltlich Regulierung). Aleph Alpha ist damit **nicht mehr der
-  eigenständige deutsche LLM-Champion**, sondern Teil eines Cohere-geführten Verbunds.
-- **Deutsche Telekom + NVIDIA** bauen eine „Industrial AI Cloud" (AI-Factory München, live Q1 2026),
-  **SAP** liefert den App-Layer. `[teils sekundär belegt]`
+- **Aleph Alpha (Heidelberg)** hat sich 2024 auf die Enterprise-Plattform **PhariaAI** verlagert; im
+  **April 2026** wurde die Fusion mit dem kanadischen **Cohere** angekündigt (Abschluss vorbehaltlich
+  Regulierung).
+- **Deutsche Telekom + NVIDIA** bauen eine „Industrial AI Cloud" (AI-Factory München, Q1 2026), **SAP**
+  liefert den App-Layer. `[teils sekundär]`
 - **Schwarz Digits (StackIT) + SAP** bieten souveräne DE-Cloud-Infrastruktur.
 - **EU „InvestAI"** (Feb 2025): 20 Mrd € für mehrere KI-Gigafactories auf EU-Boden.
 
-Die Richtung ist klar: souveräne Infrastruktur entsteht — aber wer **heute** souverän bauen will,
-greift zu offenen Gewichten oder einem EU-Anbieter (§§1–2), nicht auf Ankündigungen.
+Wer **heute** mit Datenresidenz in der EU bauen will, greift zu offenen Gewichten oder einem
+EU-Anbieter (§§1–2) — die Infrastruktur-Ankündigungen reifen parallel.
 
 ---
 
@@ -145,9 +138,9 @@ greift zu offenen Gewichten oder einem EU-Anbieter (§§1–2), nicht auf Ankün
 
 | Euer Bedarf | Empfehlung |
 |---|---|
-| **Maximale Souveränität, null US-Risiko, volle Datenkontrolle** | Offene Apache-2.0/MIT-Gewichte **selbst hosten** (Mistral, Teuken, EuroLLM, Qwen, DeepSeek) auf eigener/EU-Cloud-Infra. Kein Transfer, kein DPA nötig. |
-| **Managed, aber kein US-Zugriff** | EU-headquartierter Anbieter: **Mistral La Plateforme, IONOS, OVHcloud, Scaleway** (DPA mit SCC). |
-| **Bereits in Azure/AWS, EU-Region genügt euch** | Möglich mit DPA — aber **CLOUD-Act-Restrisiko** und angefochtene DPF-Adäquanz bewusst dokumentieren (Transfer Impact Assessment). |
+| **Maximale Datenkontrolle, Verarbeitung im eigenen Haus** | Offene Apache-2.0/MIT-Gewichte **selbst hosten** (Mistral, Teuken, EuroLLM, Qwen, DeepSeek). |
+| **Managed, mit Datenresidenz in der EU** | In der EU ansässiger Anbieter: **Mistral La Plateforme, IONOS, OVHcloud, Scaleway**. |
+| **Bereits in Azure/AWS** | Gut möglich — geltende Rechtslage (DPF-Status, Rechtsraum) im Transfer Impact Assessment dokumentieren. |
 | **Erst verstehen, was geht** | Klein anfangen mit einem self-hosted 7–24B-Modell (Ministral 3, Teuken-7B) auf einer EU-GPU-Instanz. |
 
 ## Quellen (Auswahl)
@@ -158,14 +151,13 @@ greift zu offenen Gewichten oder einem EU-Anbieter (§§1–2), nicht auf Ankün
 - Qwen3 (Apache 2.0): <https://huggingface.co/Qwen/Qwen3-235B-A22B>
 - Teuken / OpenGPT-X: <https://opengpt-x.de> · EuroLLM: <https://huggingface.co/utter-project/EuroLLM-22B>
 - US CLOUD Act: <https://aws.amazon.com/compliance/cloud-act/>
-- DPF-Verfahren (EuG T-553/23, EuGH C-703/25 P): EUR-Lex CELEX 62023TJ0553 / 62025CN0703
+- DPF-Verfahren (EuGH C-703/25 P): EUR-Lex CELEX 62025CN0703
 - AWS European Sovereign Cloud: <https://aws.amazon.com/europe/sovereign-cloud/>
 
-> **Methodik:** Fakten über mehrere Recherchequellen erhoben und die riskanten Aussagen
-> (Lizenzen, EU-Sperren, Rechtslage) adversarial gegen Primärquellen gegengeprüft. Als `[unklar]`
-> bzw. `[strittig]` markierte Punkte sind bewusst nicht als Gewissheit dargestellt. Modellversionen,
-> die nur auf Aggregator-Seiten kursierten, wurden **nicht** übernommen. Förderrecht und Rechtsprechung
-> ändern sich — vor Entscheidungen die verlinkte Primärquelle prüfen.
+> **Methodik:** Fakten über mehrere Quellen erhoben und die riskanten Aussagen (Lizenzen, EU-Klauseln,
+> Rechtslage) gegen Primärquellen gegengeprüft. Als `[offen]` markierte Punkte sind bewusst nicht als
+> Gewissheit dargestellt. Modellversionen, die nur auf Aggregator-Seiten kursierten, wurden **nicht**
+> übernommen.
 
 **Korrekturen willkommen** — Issue oder PR mit Quellenangabe.
 
