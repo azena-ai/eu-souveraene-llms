@@ -78,6 +78,7 @@ wichtiger Faktor (siehe §3).
 |---|---|---|---|
 | **Mistral La Plateforme** | 🇫🇷 | **EU per Default**, kein Training auf API-Daten, Logs 30 Tage; DPA mit SCC | eigene Mistral-Modelle |
 | **IONOS AI Model Hub** | 🇩🇪 | „Daten verlassen Deutschland nicht", ISO 27001 | Llama 3, Mistral, Mixtral, OpenGPT-X |
+| **Lyceum** | 🇩🇪 | Serverless-Modelle laufen in Paris und Finnland; Prompts und Ausgaben werden nicht gespeichert, kein Training; DPA als Anhang der AGB | Kimi K3, GLM-5.3, DeepSeek V4 Pro, Qwen3.8, MiniMax M3 |
 | **OVHcloud AI Endpoints** | 🇫🇷 | „Zero data retention", kein Training auf Nutzerdaten | Llama 3.3 70B, Mixtral, DeepSeek-R1, Whisper |
 | **Scaleway Generative APIs** | 🇫🇷 | FR-Rechenzentren, ISO 27001/17/18, SOC 2 | Llama 3, Mistral, Mixtral |
 | **Nebius AI Studio** | 🇳🇱 | EU-Hosting wählbar (Standort pro Modell ausgewiesen) | Llama, Mistral, Qwen, Nemo |
